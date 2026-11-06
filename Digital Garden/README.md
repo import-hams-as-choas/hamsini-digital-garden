@@ -17,6 +17,13 @@ Quartz is a set of tools that helps you publish your [digital garden](https://jz
 </p>
 
 # Command to run the server locally:
+`cd "Digital Garden"` \
 `node ./quartz/bootstrap-cli.mjs build --serve`
 then navigate to `http://localhost:8080`
+lsof -ti:8080 | xargs kill -9; sleep 1; cd "/Users/hamsini/Chaos/hamsini-digital-garden/Digital Garden/public" && python3 -m http.server 8080
 
+# Commands to push to github:
+Please add anything you don't want tracked to the .gitignore file first
+`git add -A`
+`git commit -m "this is my commit message"`
+`git push origin main`
